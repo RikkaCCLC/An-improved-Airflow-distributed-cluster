@@ -15,7 +15,7 @@ default_args = {
 dag = DAG(
     dag_id= 'execute_shell',
     default_args=default_args,
-    schedule_interval=timedelta(minutes=1)
+    schedule_interval=timedelta(minutes=3)
 )
 
 t1 = BashOperator(
