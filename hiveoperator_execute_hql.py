@@ -7,15 +7,15 @@ from airflow.providers.apache.hive.operators.hive import HiveOperator
 
 default_args = {
     'owner' : 'maliu',
-    'start_date':datetime(2021,10,1),
+    'start_date':datetime(2024,10,1),
     'retries':1,
-    'retry_delay':timedelta(minutes=5)
+    'retry_delay':timedelta(minutes=3)
 }
 
 dag = DAG(
     dag_id= 'execute_hive_sql',
     default_args=default_args,
-    schedule_interval=timedelta(minutes=1)
+    schedule_interval=timedelta(minutes=3)
 )
 
 first = HiveOperator(
