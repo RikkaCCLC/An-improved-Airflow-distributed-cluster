@@ -14,7 +14,7 @@ default_args = {
 dag = DAG(
     dag_id='airflow_depends5',
     default_args=default_args,
-    schedule_interval=timedelta(minutes=2),
+    schedule_interval=timedelta(minutes=5),
 )
 
 #定义task
