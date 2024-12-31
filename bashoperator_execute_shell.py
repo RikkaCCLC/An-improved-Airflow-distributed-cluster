@@ -6,10 +6,10 @@ from airflow.operators.bash import BashOperator
 
 default_args = {
     'owner' : 'zhangsan',
-    'start_date':datetime(2021,10,1),
+    'start_date':datetime(2024,12,31),
     'email':'kettle_test1@163.com',
     'retries':1,
-    'retry_delay':timedelta(minutes=5)
+    'retry_delay':timedelta(minutes=3)
 }
 
 dag = DAG(
