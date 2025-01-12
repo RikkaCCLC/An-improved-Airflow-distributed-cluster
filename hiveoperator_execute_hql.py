@@ -7,7 +7,7 @@ from airflow.providers.apache.hive.operators.hive import HiveOperator
 
 default_args = {
     'owner' : 'maliu',
-    'start_date':datetime(2025,1,8),
+    'start_date':datetime(2025,1,12),
     'retries':1,
     'retry_delay':timedelta(minutes=3)
 }
