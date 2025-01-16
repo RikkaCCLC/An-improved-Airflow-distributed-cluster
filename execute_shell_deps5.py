@@ -6,7 +6,7 @@ from airflow.operators.bash import BashOperator
 #实例化DAG
 default_args = {
     'owner':'zhangsan',# 当前DAG 拥有者
-    'start_date':datetime(2024,10,1), #第一次执行DAG 时间
+    'start_date':datetime(2025,1,16), #第一次执行DAG 时间
     'retries':1,#任务执行失败，重试次数
     'retry_delay':timedelta(minutes=5) # 执行失败重试间隔
 }
@@ -14,7 +14,7 @@ default_args = {
 dag = DAG(
     dag_id='airflow_depends5',
     default_args=default_args,
-    schedule_interval=timedelta(minutes=5),
+    schedule_interval=timedelta(minutes=3),
 )
 
 #定义task
