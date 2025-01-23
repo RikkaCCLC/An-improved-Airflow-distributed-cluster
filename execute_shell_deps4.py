@@ -8,7 +8,7 @@ default_args = {
     'owner':'zhangsan',# 当前DAG 拥有者
     'start_date':datetime(2025,1,17), #第一次执行DAG 时间
     'retries':1,#任务执行失败，重试次数
-    'retry_delay':timedelta(minutes=5) # 执行失败重试间隔
+    'retry_delay':timedelta(minutes=7) # 执行失败重试间隔
 }
 
 dag = DAG(
