@@ -8,13 +8,13 @@ default_args = {
     'owner' : 'wangwu',
     'start_date':datetime(2021,10,1),
     'retries':1,
-    'retry_delay':timedelta(minutes=5)
+    'retry_delay':timedelta(minutes=3)
 }
 
 dag = DAG(
     dag_id= 'execute_remote_shell',
     default_args=default_args,
-    schedule_interval=timedelta(minutes=1)
+    schedule_interval=timedelta(minutes=3)
 )
 
 first = SSHOperator(
