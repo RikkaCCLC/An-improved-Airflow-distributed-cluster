@@ -8,13 +8,13 @@ default_args = {
     'owner':'zhangsan',# 当前DAG 拥有者
     'start_date':datetime(2021,10,1), #第一次执行DAG 时间
     'retries':1,#任务执行失败，重试次数
-    'retry_delay':timedelta(minutes=5) # 执行失败重试间隔
+    'retry_delay':timedelta(minutes=3) # 执行失败重试间隔
 }
 
 dag = DAG(
     dag_id='airflow_depends1',
     default_args=default_args,
-    schedule_interval=timedelta(minutes=3),
+    schedule_interval=timedelta(minutes=1),
 )
 
 #定义task
