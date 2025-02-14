@@ -40,5 +40,5 @@ D = BashOperator(
 )
 
 #定义task 之间的依赖关系
-A >> C >>D
-B >> C >>D
+A >> D >>C
+A >> C >>B
